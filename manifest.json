@@ -1,1 +1,32 @@
-
+{
+  "name": "Modular Shader Base",
+  "version": "1.0.0",
+  "effects": [
+    {
+      "id": "waving_plants",
+      "name": "Wogendes Gras & Blätter",
+      "description": "Lässt Pflanzen im Wind schwingen.",
+      "target": "gbuffers_terrain.vsh",
+      "insertionPoint": "/* @inject:vertex_transform */",
+      "snippetPath": "effects/waving_plants/snippet.vsh",
+      "parameters": [
+        {
+          "key": "WAVE_SPEED",
+          "label": "Wind-Geschwindigkeit",
+          "type": "float",
+          "min": 0.5,
+          "max": 3.0,
+          "default": 1.2
+        },
+        {
+          "key": "WAVE_INTENSITY",
+          "label": "Wellen-Stärke",
+          "type": "float",
+          "min": 0.01,
+          "max": 0.1,
+          "default": 0.05
+        }
+      ]
+    }
+  ]
+}
